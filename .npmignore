@@ -3,3 +3,5 @@ src/
 public/
 tsconfig.json
 .idea/
+storybook-static/
+.storybook/
