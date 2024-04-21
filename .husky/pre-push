@@ -1,0 +1,18 @@
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo '.....starting pre-push Hooks.....'
+
+FORBIDDEN_REF="refs/heads/main"
+
+ARR_GIT_STDIN=($(echo $HUSKY_GIT_STDIN))
+
+remote_ref=${ARR_GIT_STDIN[2]}
+
+current_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$current_branch" == "main" ]; then
+    echo "Do not push main branch, directly"
+    exit 1
+fi
+
+echo '.....success push.....'
