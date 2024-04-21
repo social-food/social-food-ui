@@ -52,7 +52,7 @@ interface ComponentProps {
 }
 
 export const Component = styled.button((props: ComponentProps) => ({
-    padding: '10px 12px',
+    padding: '10px 14px',
     borderRadius: '8px',
     cursor: props.disabled ? 'not-allowed' : 'cursor',
     fontSize: '12px',
