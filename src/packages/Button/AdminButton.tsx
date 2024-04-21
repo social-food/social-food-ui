@@ -1,8 +1,8 @@
 import { ForwardedRef, HTMLAttributes, forwardRef } from "react";
 import styled from "@emotion/styled";
 
-import {AdminButtonVariant, AdminButtonVariantEnums} from "./AdminButton.variant";
-import {colorsPalette} from "../Palettes/colors.palette";
+import { AdminButtonVariant, AdminButtonVariantEnums } from "./AdminButton.variant";
+import { colorsPalette } from "../Palettes/colors.palette";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
     readonly variant: AdminButtonVariant;
@@ -33,6 +33,8 @@ const Button = (
             accent={variant === AdminButtonVariantEnums.ACCENT}
             error={variant === AdminButtonVariantEnums.ERROR}
 
+            disabled={disabled}
+
             ref={ref}
         >
             {text}
@@ -45,12 +47,14 @@ interface ComponentProps {
     readonly secondary?: boolean;
     readonly accent?: boolean;
     readonly error?: boolean;
+
+    readonly disabled?: boolean;
 }
 
 export const Component = styled.button((props: ComponentProps) => ({
     padding: '10px 12px',
     borderRadius: '8px',
-    cursor: 'pointer',
+    cursor: props.disabled ? 'not-allowed' : 'cursor',
     fontSize: '12px',
     border: props.error ? `1px solid ${colorsPalette.red}` : '1px solid transparent',
     backgroundColor: props.primary ? colorsPalette.red : (props.secondary ? colorsPalette.orange200 : (props.accent ? colorsPalette.skyBlue : (props.error ? colorsPalette.pureWhite : colorsPalette.red))),

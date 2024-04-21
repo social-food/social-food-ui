@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
 import { AdminButton } from "../../packages";
-import {AdminButtonVariantEnums} from "../../packages/Button/AdminButton.variant";
+import { AdminButtonVariantEnums } from "../../packages/Button/AdminButton.variant";
 
 const meta: Meta<typeof AdminButton> = {
     title: '버튼/AdminButton',
@@ -30,6 +31,15 @@ const meta: Meta<typeof AdminButton> = {
             },
             description: '버튼 스타일',
         },
+        disabled: {
+            control: {
+                type: 'boolean',
+            },
+            description: '비활성화 여부'
+        }
+    },
+    args: {
+        onClick: fn(),
     }
 };
 export default meta;
@@ -67,5 +77,12 @@ export const Error: Story = {
     args: {
         text: 'Hello Social Food UI Error',
         variant: AdminButtonVariantEnums.ERROR,
+    },
+};
+
+export const Disabled: Story = {
+    args: {
+        text: 'Disabled Button',
+        disabled: true,
     },
 };

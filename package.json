@@ -9,10 +9,18 @@
       "name": "shinYeongHyeon",
       "email": "den.shin.dev@gmail.com",
       "url": "https://github.com/shinYeongHyeon"
+    },
+    {
+      "name": "anHaeSoo",
+      "email": "gumake999@gmail.com",
+      "url": "https://github.com/gumake999"
     }
   ],
   "name": "social-food-ui",
-  "version": "0.0.12",
+  "version": "0.0.14",
+  "engines": {
+    "node": "21.7.3"
+  },
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
