@@ -1,6 +1,6 @@
 import React, { ForwardedRef, forwardRef, ReactElement, ReactNode } from "react";
 
-import { colorsPalette } from "../Palettes/colors.palette";
+import { colors, ColorsType, isAllowedColorType } from "../Palettes/colors.palette";
 import {
   TypographyType,
   getFontSizeByType,
@@ -8,18 +8,17 @@ import {
   HeadComponent,
   ParagraphComponent,
   isAllowedTypographyTypes,
-  isAllowedColorType,
-  isAllowedSizeType,
-  isAllowedWeightType
 } from "./useAdminTypography";
+import { FontWeightsType, isAllowedWeightType } from "../Palettes/weights.palette";
+import { FontSizesType, isAllowedSizeType } from "../Palettes/sizes.palette";
 
 interface Props {
   readonly type: TypographyType;
   readonly children: ReactNode;
   
-  readonly color?: string;
-  readonly size?: string;
-  readonly weight?: string;
+  readonly color?: ColorsType;
+  readonly size?: FontSizesType;
+  readonly weight?: FontWeightsType;
 }
 
 const Typography = (
@@ -32,29 +31,19 @@ const Typography = (
   }: Props,
   ref: ForwardedRef<(HTMLHeadingElement | HTMLParagraphElement)>
 ): ReactElement => {
-  if (!isAllowedTypographyTypes(type)) {
-    type = 'body01';
-  }
   
-  if (!color || !isAllowedColorType(color)) {
-    color = colorsPalette.black01;
-  }
-  
-  if (!size || !isAllowedSizeType(size)) {
-    size = getFontSizeByType(type);
-  }
-  
-  if (!weight || !isAllowedWeightType(weight)) {
-    weight = getFontWeightByType(type);
-  }
+  const verifiedType = type && isAllowedTypographyTypes(type) ? type : 'body01';
+  const verifiedColor = color && isAllowedColorType(color) ? color : colors.black01;
+  const verifiedSize = size && isAllowedSizeType(size) ? size : getFontSizeByType(verifiedType);
+  const verifiedWeight = weight && isAllowedWeightType(weight) ? weight : getFontWeightByType(verifiedType);
   
   const isTitle = !(type === 'body01' || type === 'description01');
   if (isTitle)
     return (
       <HeadComponent
-        color={color}
-        size={size}
-        weight={weight}
+        color={verifiedColor}
+        size={verifiedSize}
+        weight={verifiedWeight}
         ref={ref}
       >
         {children}
@@ -63,9 +52,9 @@ const Typography = (
   
   return (
     <ParagraphComponent
-      color={color}
-      size={size}
-      weight={weight}
+      color={verifiedColor}
+      size={verifiedSize}
+      weight={verifiedWeight}
       ref={ref}
     >
       {children}
