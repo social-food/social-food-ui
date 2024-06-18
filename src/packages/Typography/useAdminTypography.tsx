@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { colors } from "../Palettes/colors.palette";
-import { fontSizes } from "../Palettes/sizes.palette";
-import { fontWeights } from "../Palettes/weights.palette";
+import { colorsPalette, ColorsType } from "../Palettes/colors.palette";
+import { FontSizesType } from "../Palettes/sizes.palette";
+import { FontWeightsType } from "../Palettes/weights.palette";
 
 const fontStyle = css`
   @font-face {
@@ -57,19 +57,7 @@ const isAllowedTypographyTypes = (type: any): boolean => {
   return TypographyTypes.includes(type);
 }
 
-const isAllowedColorType = (color: string): boolean => {
-  return color in colors;
-}
-
-const isAllowedSizeType = (size: string | number): boolean => {
-  return fontSizes.includes(size);
-}
-
-const isAllowedWeightType = (weight: string | number): boolean => {
-  return fontWeights.includes(weight.toString());
-}
-
-const getFontSizeByType = (type: TypographyType) => {
+const getFontSizeByType = (type: TypographyType): FontSizesType => {
   switch (type) {
     case 'head01':
       return '40px';
@@ -88,7 +76,7 @@ const getFontSizeByType = (type: TypographyType) => {
   }
 }
 
-const getFontWeightByType = (type: TypographyType) => {
+const getFontWeightByType = (type: TypographyType): FontWeightsType => {
   switch (type) {
     case 'head01':
     case 'subhead01':
@@ -104,9 +92,9 @@ const getFontWeightByType = (type: TypographyType) => {
 }
 
 interface ComponentProps {
-  readonly color: string;
-  readonly size: string;
-  readonly weight: string;
+  readonly color: ColorsType;
+  readonly size: FontSizesType;
+  readonly weight: FontWeightsType;
 }
 
 const HeadComponent = styled.h2<ComponentProps>`
@@ -116,7 +104,7 @@ const HeadComponent = styled.h2<ComponentProps>`
     margin: 0;
     font-weight: ${(props) => (props.weight)};
     font-size: ${(props) => (props.size)};
-    color: ${(props) => (props.color)};
+    color: ${(props) => (colorsPalette[props.color])};
 `;
 
 const ParagraphComponent = styled.p<ComponentProps>`
@@ -126,15 +114,12 @@ const ParagraphComponent = styled.p<ComponentProps>`
     margin: 0;
     font-weight: ${(props) => (props.weight)};
     font-size: ${(props) => (props.size)};
-    color: ${(props) => (props.color)};
+    color: ${(props) => (colorsPalette[props.color])};
 `;
 
 export type { TypographyType }
 export {
   isAllowedTypographyTypes,
-  isAllowedColorType,
-  isAllowedSizeType,
-  isAllowedWeightType,
   getFontSizeByType,
   getFontWeightByType,
   HeadComponent,
