@@ -1,6 +1,6 @@
 import React, { ForwardedRef, forwardRef, ReactElement, ReactNode } from "react";
 
-import { colorsPalette } from "../Palettes/colors.palette";
+import { colors, ColorsType, isAllowedColorType } from "../Palettes/colors.palette";
 import {
   TypographyType,
   getFontSizeByType,
@@ -8,18 +8,17 @@ import {
   HeadComponent,
   ParagraphComponent,
   isAllowedTypographyTypes,
-  isAllowedColorType,
-  isAllowedSizeType,
-  isAllowedWeightType
 } from "./useAdminTypography";
+import { FontWeightsType, isAllowedWeightType } from "../Palettes/weights.palette";
+import { FontSizesType, isAllowedSizeType } from "../Palettes/sizes.palette";
 
 interface Props {
   readonly type: TypographyType;
   readonly children: ReactNode;
   
-  readonly color?: string;
-  readonly size?: string;
-  readonly weight?: string;
+  readonly color?: ColorsType;
+  readonly size?: FontSizesType;
+  readonly weight?: FontWeightsType;
 }
 
 const Typography = (
@@ -37,7 +36,7 @@ const Typography = (
   }
   
   if (!color || !isAllowedColorType(color)) {
-    color = colorsPalette.black01;
+    color = colors.black01;
   }
   
   if (!size || !isAllowedSizeType(size)) {
