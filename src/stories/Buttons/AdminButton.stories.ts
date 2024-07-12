@@ -3,7 +3,7 @@ import { fn } from '@storybook/test';
 
 import { AdminButton } from "../../packages";
 import { colors } from "../../packages/Palettes/colors.palette";
-import { fontWeights } from "../../packages/Palettes/weights.palette";
+import { adminFontWeights } from "../../packages/Palettes/weights.palette";
 import { fontSizes } from "../../packages/Palettes/sizes.palette";
 
 const meta: Meta<typeof AdminButton> = {
@@ -39,7 +39,7 @@ const meta: Meta<typeof AdminButton> = {
     },
     textWeight: {
       options: [
-        ...fontWeights,
+        ...adminFontWeights,
       ],
       control: {
         type: 'select',

@@ -1,13 +1,27 @@
-const fontWeights = ['100', '400', '600', '700'];
+const adminFontWeights = ['100', '400', '600', '700'];
+
+const fontWeights = ['300', '400', '700'];
+
+type AdminFontWeightsType = typeof adminFontWeights[number];
 
 type FontWeightsType = typeof fontWeights[number];
 
-const isAllowedWeightType = (weight: string | number): boolean => {
+const isAllowedAdminFontWeightsType = (weight: string | number): boolean => {
+  return adminFontWeights.includes(weight.toString());
+}
+
+const isAllowedFontWeightsType = (weight: string | number): boolean => {
   return fontWeights.includes(weight.toString());
 }
 
-export type { FontWeightsType }
+export type {
+  AdminFontWeightsType,
+  FontWeightsType,
+}
+
 export {
+  adminFontWeights,
   fontWeights,
-  isAllowedWeightType,
+  isAllowedAdminFontWeightsType,
+  isAllowedFontWeightsType,
 }

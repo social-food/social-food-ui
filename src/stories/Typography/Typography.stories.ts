@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AdminTypography } from "../../packages";
+import { Typography } from "../../packages";
 import { colors } from "../../packages/Palettes/colors.palette";
 import { fontSizes } from "../../packages/Palettes/sizes.palette";
-import { adminFontWeights } from "../../packages/Palettes/weights.palette";
+import { fontWeights } from "../../packages/Palettes/weights.palette";
 
-const meta: Meta<typeof AdminTypography> = {
-  title: '텍스트/AdminTypography',
-  component: AdminTypography,
+const meta: Meta<typeof Typography> = {
+  title: '텍스트/Typography',
+  component: Typography,
   parameters: {
     layout: 'centered',
   },
@@ -20,17 +20,19 @@ const meta: Meta<typeof AdminTypography> = {
     },
     type: {
       options: {
-        Head01: 'head01',
-        SubHead01: 'subhead01',
-        Title01: 'title01',
-        Title02: 'title02',
-        Body01: 'body01',
-        Description01: 'description01',
+        h1: 'h1',
+        h2: 'h2',
+        h3: 'h3',
+        h4: 'h4',
+        h5: 'h5',
+        h6: 'h6',
+        p: 'p',
+        span: 'span'
       },
       control: {
         type: 'select',
       },
-      description: '텍스트 타입',
+      description: '텍스트 태그 타입',
     },
     color: {
       options: {
@@ -55,12 +57,12 @@ const meta: Meta<typeof AdminTypography> = {
     weight: {
       options: [
         'default',
-        ...adminFontWeights,
+        ...fontWeights,
       ],
       control: {
         type: 'select',
       },
-      description: '텍스트 굵기 커스텀',
+      description: '텍스트 굵기',
     },
   },
 };
@@ -71,6 +73,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: 'Social Food UI Typography',
-    type: 'head01',
+    type: 'p',
   },
 };

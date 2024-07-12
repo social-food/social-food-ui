@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { colorsPalette, ColorsType } from "../Palettes/colors.palette";
-import { FontSizesType } from "../Palettes/sizes.palette";
-import { FontWeightsType } from "../Palettes/weights.palette";
+import { colorsPalette, ColorsType } from "../../Palettes/colors.palette";
+import { FontSizesType } from "../../Palettes/sizes.palette";
+import { AdminFontWeightsType } from "../../Palettes/weights.palette";
 
 const fontStyle = css`
   @font-face {
@@ -76,7 +76,7 @@ const getFontSizeByType = (type: TypographyType): FontSizesType => {
   }
 }
 
-const getFontWeightByType = (type: TypographyType): FontWeightsType => {
+const getFontWeightByType = (type: TypographyType): AdminFontWeightsType => {
   switch (type) {
     case 'head01':
     case 'subhead01':
@@ -94,7 +94,7 @@ const getFontWeightByType = (type: TypographyType): FontWeightsType => {
 interface ComponentProps {
   readonly color: ColorsType;
   readonly size: FontSizesType;
-  readonly weight: FontWeightsType;
+  readonly weight: AdminFontWeightsType;
 }
 
 const HeadComponent = styled.h2<ComponentProps>`
