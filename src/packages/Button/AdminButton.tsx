@@ -3,8 +3,8 @@ import React, { ForwardedRef, HTMLAttributes, forwardRef, ReactNode } from "reac
 import styled from "@emotion/styled";
 
 import { colors, colorsPalette, ColorsType, isAllowedColorType } from "../Palettes/colors.palette";
-import Typography from "../Typography/AdminTypography";
-import { FontWeightsType, isAllowedWeightType } from "../Palettes/weights.palette";
+import Typography from "../Typography/Admin/AdminTypography";
+import { AdminFontWeightsType, isAllowedAdminFontWeightsType } from "../Palettes/weights.palette";
 import { FontSizesType, isAllowedSizeType } from "../Palettes/sizes.palette";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
@@ -12,7 +12,7 @@ interface Props extends HTMLAttributes<HTMLButtonElement> {
   
   readonly buttonColor?: ColorsType;
   readonly textColor?: ColorsType;
-  readonly textWeight?: FontWeightsType;
+  readonly textWeight?: AdminFontWeightsType;
   readonly textSize?: FontSizesType;
   readonly boxShadow?: boolean;
   readonly disabled?: boolean;
@@ -44,7 +44,7 @@ const Button = (
 ) => {
   const verifiedButtonColor = buttonColor && isAllowedColorType(buttonColor) ? buttonColor : colors.coral01;
   const verifiedTextColor = textColor && isAllowedColorType(textColor) ? textColor : colors.black05;
-  const verifiedTextWeight = textWeight && isAllowedWeightType(textWeight) ? textWeight : '600';
+  const verifiedTextWeight = textWeight && isAllowedAdminFontWeightsType(textWeight) ? textWeight : '600';
   const verifiedTextSize = textSize && isAllowedSizeType(textSize) ? textSize : '22px';
   const verifiedDisabled = typeof disabled === 'boolean' ? disabled : false;
   const verifiedBoxShadow = typeof boxShadow === 'boolean' ? boxShadow : true;
