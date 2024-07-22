@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Typography } from "../../packages";
 import { colors } from "../../packages/Palettes/colors.palette";
 import { fontSizes } from "../../packages/Palettes/sizes.palette";
 import { fontWeights } from "../../packages/Palettes/weights.palette";
+
+import { Typography } from "../../packages";
 
 const meta: Meta<typeof Typography> = {
   title: '텍스트/Typography',
@@ -33,6 +34,16 @@ const meta: Meta<typeof Typography> = {
         type: 'select',
       },
       description: '텍스트 태그 타입',
+    },
+    fontStyle: {
+      options: {
+        Pretendard: 'Pretendard',
+        GmarketSans: 'GmarketSans',
+      },
+      control: {
+        type: 'select',
+      },
+      description: '텍스트 폰트 타입',
     },
     color: {
       options: {
@@ -74,5 +85,6 @@ export const Default: Story = {
   args: {
     children: 'Social Food UI Typography',
     type: 'p',
+    fontStyle: 'Pretendard'
   },
 };
