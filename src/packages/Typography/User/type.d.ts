@@ -7,6 +7,7 @@ import { FontWeightsType } from "../../Palettes/weights.palette";
 interface ITypographyProps {
   readonly children: ReactNode;
   
+  readonly fontStyle?: 'GmarketSans' | 'Pretendard';
   readonly type?: ElementType;
   readonly color?: ColorsType;
   readonly size?: FontSizesType;
@@ -14,6 +15,7 @@ interface ITypographyProps {
 }
 
 interface ITypographyStyleProps {
+  readonly fontStyle: string;
   readonly color: ColorsType;
   readonly size: FontSizesType;
   readonly weight: FontWeightsType;
