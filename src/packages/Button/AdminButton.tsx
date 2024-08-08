@@ -3,9 +3,9 @@ import React, { ForwardedRef, HTMLAttributes, forwardRef, ReactNode } from "reac
 import styled from "@emotion/styled";
 
 import { colors, colorsPalette, ColorsType, isAllowedColorType } from "../Palettes/colors.palette";
-import Typography from "../Typography/Admin/AdminTypography";
 import { AdminFontWeightsType, isAllowedAdminFontWeightsType } from "../Palettes/weights.palette";
 import { FontSizesType, isAllowedSizeType } from "../Palettes/sizes.palette";
+import Typography from "../Typography/Admin/AdminTypography";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   readonly children: ReactNode;
