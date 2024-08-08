@@ -1,6 +1,9 @@
 import React, { ForwardedRef, forwardRef, ReactElement, ReactNode } from "react";
 
 import { colors, ColorsType, isAllowedColorType } from "../../Palettes/colors.palette";
+import { AdminFontWeightsType, isAllowedAdminFontWeightsType } from "../../Palettes/weights.palette";
+import { FontSizesType, isAllowedSizeType } from "../../Palettes/sizes.palette";
+
 import {
   TypographyType,
   getFontSizeByType,
@@ -9,8 +12,6 @@ import {
   ParagraphComponent,
   isAllowedTypographyTypes,
 } from "./useAdminTypography";
-import { AdminFontWeightsType, isAllowedAdminFontWeightsType } from "../../Palettes/weights.palette";
-import { FontSizesType, isAllowedSizeType } from "../../Palettes/sizes.palette";
 
 interface Props {
   readonly type: TypographyType;

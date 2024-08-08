@@ -13,3 +13,4 @@ export { default as Body1Light } from './Typography/User/template/Body1Light';
 export { default as Body2 } from './Typography/User/template/Body2';
 export { default as Body2Bold } from './Typography/User/template/Body2Bold';
 export { default as Body2Light } from './Typography/User/template/Body2Light';
+export { default as Navigation } from "./Navigation/Navigation";
