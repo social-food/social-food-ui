@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { colors } from '../../packages/Palettes/colors.palette';
 import { Navigation } from '../../packages';
 
-// @ts-ignore : 이미지를 절대경로로 import 해야하는데 대응 실패해서 임시
 import IconLogo from '../../asset/icons/logo.png';
 
 const meta: Meta<typeof Navigation> = {
