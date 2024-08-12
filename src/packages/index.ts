@@ -1,3 +1,15 @@
 export { default as AdminButton } from "./Button/AdminButton";
 export { default as AdminTypography } from "./Typography/Admin/AdminTypography";
 export { default as Typography } from './Typography/User/Typography';
+export { default as H1 } from './Typography/User/template/H1';
+export { default as H2 } from './Typography/User/template/H2';
+export { default as Title1 } from './Typography/User/template/Title1';
+export { default as Title1Description } from './Typography/User/template/Title1Description';
+export { default as Title2 } from './Typography/User/template/Title2';
+export { default as Title2Description } from './Typography/User/template/Title2Description';
+export { default as Body1 } from './Typography/User/template/Body1';
+export { default as Body1Bold } from './Typography/User/template/Body1Bold';
+export { default as Body1Light } from './Typography/User/template/Body1Light';
+export { default as Body2 } from './Typography/User/template/Body2';
+export { default as Body2Bold } from './Typography/User/template/Body2Bold';
+export { default as Body2Light } from './Typography/User/template/Body2Light';
