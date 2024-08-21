@@ -9,7 +9,7 @@ import { ITypographyProps } from "./type";
 import Component from "./useTypography";
 
 const Typography = (props: ITypographyProps) => {
-  const { children, type, fontStyle, color, size, weight } = props;
+  const { children, type, fontStyle, color, size, weight, className } = props;
   
   const verifiedType = type && isAllowedTypographyType(type) ? type : 'p';
   const verifiedFontStyle = fontStyle && fontStyle === 'GmarketSans' ? fontStyle : 'Pretendard';
@@ -24,6 +24,7 @@ const Typography = (props: ITypographyProps) => {
       color={verifiedColor}
       size={verifiedSize}
       weight={verifiedWeight}
+      className={className}
     >
       {children}
     </Component>

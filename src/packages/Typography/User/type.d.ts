@@ -12,6 +12,7 @@ interface ITypographyProps {
   readonly color?: ColorsType;
   readonly size?: FontSizesType;
   readonly weight?: FontWeightsType;
+  readonly className?: string;
 }
 
 interface ITypographyStyleProps {

@@ -27,6 +27,7 @@
     "declarationMap": true,
     "outDir": "/dist",
   },
+  "types": ["@emotion/react/types/css-prop"],
   "include": [
     "src/packages/**/*.tsx",
     "src/packages/**/*.ts",
