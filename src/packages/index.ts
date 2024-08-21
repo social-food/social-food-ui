@@ -15,3 +15,4 @@ export { default as Body2Bold } from './Typography/User/template/Body2Bold';
 export { default as Body2Light } from './Typography/User/template/Body2Light';
 export { default as Navigation } from "./Navigation/Navigation";
 export { default as SearchInput } from "./Input/SearchInput";
+export { default as FoodCard } from "./FoodCard";
