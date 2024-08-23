@@ -1,11 +1,12 @@
 import { forwardRef } from "react";
 
 import { colors } from "../../../Palettes/colors.palette";
+
 import Typography from "../Typography";
 import { ITypographyProps } from "../type";
 
 const Body2 = (props: ITypographyProps) => {
-  const { children } = props;
+  const { children, className } = props;
   
   return (
     <Typography
@@ -14,6 +15,7 @@ const Body2 = (props: ITypographyProps) => {
       color={colors.black01}
       size={'12px'}
       weight={'400'}
+      className={className}
     >
       {children}
     </Typography>

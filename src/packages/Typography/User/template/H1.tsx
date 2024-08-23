@@ -6,7 +6,7 @@ import Typography from "../Typography";
 import { ITypographyProps } from "../type";
 
 const H1 = (props: ITypographyProps) => {
-  const { children } = props;
+  const { children, className } = props;
   
   return (
     <Typography
@@ -15,6 +15,7 @@ const H1 = (props: ITypographyProps) => {
       color={colors.black01}
       size={'28px'}
       weight={'700'}
+      className={className}
     >
       {children}
     </Typography>
