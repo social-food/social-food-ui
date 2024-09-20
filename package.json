@@ -17,7 +17,7 @@
     }
   ],
   "name": "social-food-ui",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "engines": {
     "node": "21.7.3"
   },
@@ -47,7 +47,6 @@
     "postcss": "8.4.5"
   },
   "scripts": {
-    "postinstall": "husky install",
     "prepare": "rm -rf dist && mkdir dist && tsc",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
