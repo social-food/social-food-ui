@@ -17,7 +17,7 @@
     }
   ],
   "name": "social-food-ui",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "engines": {
     "node": "21.7.3"
   },
@@ -48,7 +48,7 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "prepare": "rm -rf dist && mkdir dist && tsc",
+    "prepare": "sudo rm -rf dist && mkdir dist && tsc",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "build-storybook": "storybook build"
