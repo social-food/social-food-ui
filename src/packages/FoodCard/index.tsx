@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 import { Body1Bold, Body2, Body2Light } from "../index";
 
-import IconRating from "@asset/icons/star.svg";
+import IconRating from "../../asset/icons/star.svg";
 
 interface IFoodCardProps {
   linkUrl: string;
