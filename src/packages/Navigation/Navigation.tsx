@@ -6,7 +6,7 @@ import { Typography } from "../index";
 import { NavigationPropsType } from './type';
 import { Link, LogoComponent, MenusComponent, MyPageComponent, NavigationComponent } from "./useNavigation";
 
-const IconMyPage = '../../asset/icons/whiteProfile.svg';
+import IconMyPage from '../../asset/icons/whiteProfile.svg';
 
 const Navigation = (
   {

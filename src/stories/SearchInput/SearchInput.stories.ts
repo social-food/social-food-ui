@@ -3,7 +3,7 @@ import { fn } from '@storybook/test';
 
 import { SearchInput } from '../../packages';
 
-const IconSearch = '../../asset/icons/defaultSearchIcon.svg';
+import IconSearch from '../../asset/icons/defaultSearchIcon.svg';
 
 const meta: Meta<typeof SearchInput> = {
   title: '검색박스/SearchInput',
