@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { colors } from '../../packages/Palettes/colors.palette';
 import { Navigation } from '../../packages';
 
-import IconLogo from '../../asset/icons/logo.png';
+const IconLogo = '../../asset/icons/logo.png';
 
 const meta: Meta<typeof Navigation> = {
   title: '내비게이션바/Navigation',
