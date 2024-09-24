@@ -4,7 +4,7 @@ import { Body2Bold, Title2Description } from "../../index";
 
 import { Button, Input, InputWrapper, ISearchInputProps, TextWrapper, Wrapper } from "./useSearchInput";
 
-import IconSearch from '../../../asset/icons/defaultSearchIcon.svg';
+const IconSearch = '../../../asset/icons/defaultSearchIcon.svg';
 
 const SearchInput = (
   {
