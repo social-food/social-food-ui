@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { colors } from '../../packages/Palettes/colors.palette';
-import { Navigation } from '../../packages';
+import { Navigation } from '../../index';
 
-import IconLogo from '../../asset/icons/logo.png';
+import IconLogo from '/assets/images/logo.png';
 
 const meta: Meta<typeof Navigation> = {
   title: '내비게이션바/Navigation',

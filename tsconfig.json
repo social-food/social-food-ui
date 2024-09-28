@@ -28,7 +28,6 @@
   "include": [
     "src/packages/**/*.tsx",
     "src/packages/**/*.ts",
-    "src/asset/**/*",
     "src/@types/*.d.ts",
     "src/stories/**/*.stories.ts"
   ],

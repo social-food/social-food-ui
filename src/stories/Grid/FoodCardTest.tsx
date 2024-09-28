@@ -1,4 +1,4 @@
-import { FoodCard } from "../../packages";
+import { FoodCard } from "../../index";
 
 const count = new Array(10).fill(null);
 

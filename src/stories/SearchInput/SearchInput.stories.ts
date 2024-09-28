@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { SearchInput } from '../../packages';
+import { SearchInput } from '../../index';
 
-import IconSearch from '../../asset/icons/defaultSearchIcon.svg';
+import IconSearch from '/assets/images/defaultSearchIcon.svg';
 
 const meta: Meta<typeof SearchInput> = {
   title: '검색박스/SearchInput',
