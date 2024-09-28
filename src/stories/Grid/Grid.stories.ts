@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Grid } from "../../packages";
+import { Grid } from "../../index";
 
 import FoodCardTest from "./FoodCardTest";
 

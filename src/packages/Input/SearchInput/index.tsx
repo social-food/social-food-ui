@@ -1,10 +1,10 @@
 import { ForwardedRef, forwardRef } from "react";
 
-import { Body2Bold, Title2Description } from "../../index";
+import { Body2Bold, Title2Description } from "../../../index";
 
 import { Button, Input, InputWrapper, ISearchInputProps, TextWrapper, Wrapper } from "./useSearchInput";
 
-import IconSearch from '../../../asset/icons/defaultSearchIcon.svg';
+import IconSearch from '/assets/images/defaultSearchIcon.svg';
 
 const SearchInput = (
   {
