@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { AdminButton } from "../../index";
+import { AdminButton } from "../../packages";
 import { colors } from "../../packages/Palettes/colors.palette";
 import { adminFontWeights } from "../../packages/Palettes/weights.palette";
 import { fontSizes } from "../../packages/Palettes/sizes.palette";

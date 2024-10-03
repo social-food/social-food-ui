@@ -1,7 +1,7 @@
+import * as path from "path";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path';
 
 export default defineConfig({
     plugins: [
@@ -9,9 +9,21 @@ export default defineConfig({
         tsconfigPaths(),
     ],
     build: {
-        outDir: "dist",
+        lib: {
+            entry: path.resolve(__dirname, "src/packages/index.tsx"),
+            name: "index",
+            fileName: "index",
+        },
         rollupOptions: {
-            input: resolve(__dirname, 'src/index.ts'),
-        }
+            external: ["react"],
+            output: {
+                globals: {
+                    react: "React",
+                },
+            },
+        },
+        commonjsOptions: {
+            esmExternals: ["react"],
+        },
     },
 });

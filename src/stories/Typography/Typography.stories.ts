@@ -4,7 +4,7 @@ import { colors } from "../../packages/Palettes/colors.palette";
 import { fontSizes } from "../../packages/Palettes/sizes.palette";
 import { fontWeights } from "../../packages/Palettes/weights.palette";
 
-import { Typography } from "../../index";
+import { Typography } from "../../packages";
 
 const meta: Meta<typeof Typography> = {
   title: '텍스트/Typography',

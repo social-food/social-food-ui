@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AdminTypography } from "../../index";
+import { AdminTypography } from "../../packages";
 import { colors } from "../../packages/Palettes/colors.palette";
 import { fontSizes } from "../../packages/Palettes/sizes.palette";
 import { adminFontWeights } from "../../packages/Palettes/weights.palette";

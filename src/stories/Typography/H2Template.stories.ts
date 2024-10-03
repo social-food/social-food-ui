@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { H2 as H2Template } from "../../index";
+import { H2 as H2Template } from "../../packages";
 
 const meta: Meta<typeof H2Template> = {
   title: '텍스트/Typography',
