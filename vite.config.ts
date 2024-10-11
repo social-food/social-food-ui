@@ -9,9 +9,10 @@ export default defineConfig({
         tsconfigPaths(),
     ],
     build: {
-        outDir: "dist",
-        rollupOptions: {
-            input: resolve(__dirname, 'src/index.ts'),
-        }
+        lib: {
+            entry: resolve(__dirname, 'index.ts'),
+            name: 'social-food-ui',
+            fileName: (format) => `index.${format}.js`,
+        },
     },
 });
