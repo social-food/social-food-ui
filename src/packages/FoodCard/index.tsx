@@ -2,7 +2,7 @@ import React, { ForwardedRef, forwardRef } from "react";
 
 import styled from "@emotion/styled";
 
-import { Body1Bold, Body2, Body2Light } from "../../index";
+import { Body1Bold, Body2, Body2Light } from "../../../index";
 
 import IconRating from "/assets/images/star.svg";
 
