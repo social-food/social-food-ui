@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { colors } from "../../packages/Palettes/colors.palette";
-import { fontSizes } from "../../packages/Palettes/sizes.palette";
-import { fontWeights } from "../../packages/Palettes/weights.palette";
+import { colors } from "@packages/Palettes/colors.palette";
+import { fontSizes } from "@packages/Palettes/sizes.palette";
+import { fontWeights } from "@packages/Palettes/weights.palette";
 
-import { Typography } from "../../../index";
+import { Typography } from "../../index";
 
 const meta: Meta<typeof Typography> = {
   title: '텍스트/Typography',

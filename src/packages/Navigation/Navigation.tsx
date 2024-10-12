@@ -1,7 +1,7 @@
 import React, { ForwardedRef, forwardRef } from 'react';
 
 import { colors, isAllowedColorType } from '../Palettes/colors.palette';
-import { Typography } from "../../../index";
+import { Typography } from "../../index";
 
 import { NavigationPropsType } from './type';
 import { Link, LogoComponent, MenusComponent, MyPageComponent, NavigationComponent } from "./useNavigation";

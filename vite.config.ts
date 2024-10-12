@@ -4,15 +4,21 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path';
 
 export default defineConfig({
+    resolve: {
+        alias: {
+            '@packages': resolve(__dirname, 'src/packages')
+        }
+    },
     plugins: [
         react(),
         tsconfigPaths(),
     ],
     build: {
         lib: {
-            entry: resolve(__dirname, 'index.ts'),
+            entry: 'src/index.ts',
             name: 'social-food-ui',
-            fileName: (format) => `index.${format}.js`,
-        },
-    },
+            fileName: 'index',
+            formats: ['es', 'cjs']
+        }
+    }
 });
