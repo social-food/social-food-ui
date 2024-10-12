@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AdminTypography } from "../../../index";
-import { colors } from "../../packages/Palettes/colors.palette";
-import { fontSizes } from "../../packages/Palettes/sizes.palette";
-import { adminFontWeights } from "../../packages/Palettes/weights.palette";
+import { AdminTypography } from "../../index";
+import { colors } from "@packages/Palettes/colors.palette";
+import { fontSizes } from "@packages/Palettes/sizes.palette";
+import { adminFontWeights } from "@packages/Palettes/weights.palette";
 
 const meta: Meta<typeof AdminTypography> = {
   title: '텍스트/AdminTypography',

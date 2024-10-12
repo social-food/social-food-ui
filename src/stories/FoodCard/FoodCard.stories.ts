@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { FoodCard } from "../../../index";
+import { FoodCard } from "../../index";
 
 const meta: Meta<typeof FoodCard> = {
   title: '음식카드/FoodCard',
