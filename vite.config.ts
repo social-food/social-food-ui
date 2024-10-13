@@ -19,6 +19,9 @@ export default defineConfig({
             name: 'social-food-ui',
             fileName: 'index',
             formats: ['es', 'cjs']
+        },
+        rollupOptions: {
+            external: ['@emotion/react', '@emotion/styled']
         }
     }
 });
