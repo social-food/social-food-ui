@@ -22,6 +22,9 @@ export default defineConfig({
         },
         rollupOptions: {
             external: ['@emotion/react', '@emotion/styled']
-        }
+        },
+    },
+    optimizeDeps: {
+        exclude: ['@emotion/react', '@emotion/styled']
     }
 });
