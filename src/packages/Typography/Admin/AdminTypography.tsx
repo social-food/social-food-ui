@@ -43,8 +43,6 @@ const Typography = (
     return (
       <HeadComponent
         color={verifiedColor}
-        size={verifiedSize}
-        weight={verifiedWeight}
         ref={ref}
       >
         {children}
