@@ -14,31 +14,31 @@ const fontStyle = css`
   }
 
   @font-face {
-      font-family: 'Pretendard';
-      src: url('/assets/fonts/Pretendard-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
+    font-family: 'Pretendard';
+    src: url('/assets/fonts/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
   }
 
   @font-face {
-      font-family: 'Pretendard';
-      src: url('/assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
-      font-weight: 600;
-      font-style: normal;
+    font-family: 'Pretendard';
+    src: url('/assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
   }
 
   @font-face {
-      font-family: 'Pretendard';
-      src: url('/assets/fonts/Pretendard-Bold.woff2') format('woff2');
-      font-weight: 700;
-      font-style: normal;
+    font-family: 'Pretendard';
+    src: url('/assets/fonts/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
   }
 
   @font-face {
-      font-family: 'Alegreya';
-      src: url('/assets/fonts/Alegreya-Bold.woff') format('woff');
-      font-weight: 700;
-      font-style: normal;
+    font-family: 'Alegreya';
+    src: url('/assets/fonts/Alegreya-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
   }
 `;
 
@@ -97,24 +97,18 @@ interface ComponentProps {
   readonly weight: AdminFontWeightsType;
 }
 
-const HeadComponent = styled.h2<ComponentProps>`
-    ${fontStyle};
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    
-    margin: 0;
-    font-weight: ${(props) => (props.weight)};
-    font-size: ${(props) => (props.size)};
-    color: ${(props) => (colorsPalette[props.color])};
+const HeadComponent = styled.h2`
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin: 0;
 `;
 
 const ParagraphComponent = styled.p<ComponentProps>`
-    ${fontStyle};
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    
-    margin: 0;
-    font-weight: ${(props) => (props.weight)};
-    font-size: ${(props) => (props.size)};
-    color: ${(props) => (colorsPalette[props.color])};
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+  margin: 0;
+  font-weight: ${(props) => (props.weight)};
+  font-size: ${(props) => (props.size)};
+  color: ${(props) => (colorsPalette[props.color])};
 `;
 
 export type { TypographyType }
