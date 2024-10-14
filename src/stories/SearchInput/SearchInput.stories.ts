@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { SearchInput } from '../../index';
+import { SearchInput } from '@packages/index';
 
 import IconSearch from '/assets/images/defaultSearchIcon.svg';
 
