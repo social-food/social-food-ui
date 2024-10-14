@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Title2 as Title2Template } from "../../index";
+import { Title2 as Title2Template } from "@packages/index";
 
 const meta: Meta<typeof Title2Template> = {
   title: '텍스트/Typography',

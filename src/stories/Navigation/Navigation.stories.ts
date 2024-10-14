@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { colors } from '@packages/Palettes/colors.palette';
-import { Navigation } from '../../index';
+import { Navigation } from '@packages/index';
 
 import IconLogo from '/assets/images/logo.png';
 
