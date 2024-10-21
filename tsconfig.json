@@ -4,12 +4,10 @@
     "paths": {
       "@packages/*": ["src/packages/*"]
     },
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+    "module": "ESNext",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,7 +15,6 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "ES2022",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -25,13 +22,14 @@
     "jsx": "react-jsx",
     "declaration": true,
     "declarationMap": true,
-    "outDir": "./dist",
+    "outDir": "./dist"
   },
   "types": ["@emotion/react/types/css-prop"],
   "include": [
-    "src/packages/**/*.tsx",
-    "src/packages/**/*.ts",
+    "src/packages",
     "src/@types/*.d.ts",
-    "src/stories/**/*.stories.ts"
   ],
+  "exclude": [
+    "src/stories/**/*.stories.ts"
+  ]
 }
