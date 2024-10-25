@@ -15,15 +15,15 @@ const getRepeatValue = (column: number) => {
 
 const Component = styled.div<GridStyleComponentProps>`
   display: grid;
-  grid-template-columns: ${(props) => (props.mobileColumn) ? `repeat(${getRepeatValue(props.mobileColumn)}, 1fr)` : 'auto'};
+  grid-template-columns: ${(props: GridStyleComponentProps) => (props.mobileColumn) ? `repeat(${getRepeatValue(props.mobileColumn)}, 1fr)` : 'auto'};
   gap: 16px;
   
   @media (min-width: ${mediaSizes.tablet}) {
-    grid-template-columns: ${(props) => (props.tabletColumn) ? `repeat(${getRepeatValue(props.tabletColumn)}, 1fr)` : 'inherit'};
+    grid-template-columns: ${(props: GridStyleComponentProps) => (props.tabletColumn) ? `repeat(${getRepeatValue(props.tabletColumn)}, 1fr)` : 'inherit'};
   }
 
   @media (min-width: ${mediaSizes.laptop}) {
-    grid-template-columns: ${(props) => (props.laptopColumn) ? `repeat(${getRepeatValue(props.laptopColumn)}, 1fr)` : 'inherit'};
+    grid-template-columns: ${(props: GridStyleComponentProps) => (props.laptopColumn) ? `repeat(${getRepeatValue(props.laptopColumn)}, 1fr)` : 'inherit'};
     gap: 24px;
   }
 `;

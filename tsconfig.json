@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@packages/*": ["src/packages/*"]
+      "@packages/*": ["src/packages/*"],
+      "@assets/*": ["src/assets/*"],
     },
     "target": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
@@ -26,7 +27,7 @@
   },
   "types": ["@emotion/react/types/css-prop"],
   "include": [
-    "src/packages",
+    "src/packages/*",
     "src/@types/*.d.ts",
   ],
   "exclude": [
