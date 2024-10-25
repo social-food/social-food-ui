@@ -30,4 +30,7 @@ interface IHasLogoProps extends IDefaultProps {
 type HasMyPageAndLogoPropsType = IHasMyPageProps & IHasLogoProps;
 type NavigationPropsType = IHasMyPageProps | IHasLogoProps | HasMyPageAndLogoPropsType;
 
-export type { NavigationPropsType }
+export type {
+  NavigationPropsType,
+  INavMenus
+}

@@ -1,10 +1,10 @@
 import React, { ForwardedRef, HTMLAttributes, forwardRef, ReactNode } from "react";
 
-import styled from "@emotion/styled";
-
-import { colors, colorsPalette, ColorsType, isAllowedColorType } from "../Palettes/colors.palette";
+import { colors, ColorsType, isAllowedColorType } from "../Palettes/colors.palette";
 import { AdminFontWeightsType, isAllowedAdminFontWeightsType } from "../Palettes/weights.palette";
 import { FontSizesType, isAllowedSizeType } from "../Palettes/sizes.palette";
+
+import { Component } from "./useAdminButton";
 import Typography from "../Typography/Admin/AdminTypography";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
@@ -50,42 +50,23 @@ const Button = (
   const verifiedBoxShadow = typeof boxShadow === 'boolean' ? boxShadow : true;
   
   return (
-    <>
-      <Component
-        {...htmlButtonAttributes}
-        color={verifiedButtonColor}
-        disabled={verifiedDisabled}
-        boxShadow={verifiedBoxShadow}
-        ref={ref}
+    <Component
+      {...htmlButtonAttributes}
+      color={verifiedButtonColor}
+      disabled={verifiedDisabled}
+      boxShadow={verifiedBoxShadow}
+      ref={ref}
+    >
+      <Typography
+        type={'title01'}
+        weight={verifiedTextWeight}
+        color={verifiedTextColor}
+        size={verifiedTextSize}
       >
-        <Typography
-          type={'title01'}
-          weight={verifiedTextWeight}
-          color={verifiedTextColor}
-          size={verifiedTextSize}
-        >
-          {children}
-        </Typography>
-      </Component>
-    </>
+        {children}
+      </Typography>
+    </Component>
   );
 };
-
-interface ComponentProps {
-  readonly color: ColorsType;
-  readonly boxShadow: boolean;
-  readonly disabled: boolean;
-}
-
-export const Component = styled.button((props: ComponentProps) => ({
-  padding: '12px',
-  borderRadius: '10px',
-  cursor: props.disabled ? 'not-allowed' : 'pointer',
-  border: '1px solid transparent',
-  backgroundColor: colorsPalette[props.color],
-  boxShadow: props.boxShadow
-    ? '0px 4px 4px 0px rgba(0,0,0,0.25)'
-    : 'none',
-}));
 
 export default forwardRef(Button);
