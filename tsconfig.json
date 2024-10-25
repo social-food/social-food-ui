@@ -28,9 +28,7 @@
   "types": ["@emotion/react/types/css-prop"],
   "include": [
     "src/packages/*",
-    "src/@types/*.d.ts",
+    "src/@types/*",
+    "src/stories/*"
   ],
-  "exclude": [
-    "src/stories/**/*.stories.ts"
-  ]
 }
