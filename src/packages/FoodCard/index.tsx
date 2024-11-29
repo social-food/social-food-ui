@@ -1,89 +1,93 @@
-import React, { ForwardedRef, forwardRef } from "react";
+import React, { ForwardedRef, forwardRef } from 'react';
 
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-import { Body1Bold, Body2, Body2Light } from "../index";
-
-import IconRating from "/assets/images/star.svg";
+import { Body1Bold, Body2, Body2Light } from '../index';
 
 interface IFoodCardProps {
   linkUrl: string;
   placeImage: string;
   placeName: string;
-  placeRating?: string;
+  IconRatingUrl: string;
   placeAddress: string;
+  
+  placeRating?: string;
 }
 
 const Link = styled.a`
-    width: 100%;
-    height: 100%;
-    display: block;
-    outline: 0;
-    text-decoration: none;
-    cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: 0;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 const Card = styled.div`
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: flex-start;
 `;
 
 const ImageFrame = styled.div`
+  width: 100%;
+  min-width: 150px;
+  min-height: 150px;
+  aspect-ratio: 1;
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
+
+  transition: all 0.5s ease;
+
+  & img {
     width: 100%;
-    min-width: 150px;
-    min-height: 150px;
-    aspect-ratio: 1;
-    display: block;
-    border-radius: 15px;
-    overflow: hidden;
-
-    transition: all 0.5s ease;
-
-    & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 const TextWrapper = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 `;
 
 const Title = styled.div`
-    display: flex;
-    gap: 2px;
-    align-items: flex-end;
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
 `;
 
 const Name = styled(Body1Bold)`
-    flex: 1;
+  flex: 1;
 
-    width: auto;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+  width: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 `;
 
 const Rating = styled.div`
-    display: flex;
-    align-items: center;
-    flex: 0;
+  display: flex;
+  align-items: center;
+  flex: 0;
+
+  & img {
+    display: block;
+  }
 `;
 
 const Description = styled(Body2Light)`
-    width: auto;
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+  width: auto;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 `;
 
 const FoodCard = (
@@ -92,6 +96,7 @@ const FoodCard = (
     placeImage,
     placeName,
     placeRating = '0.0',
+    IconRatingUrl = '',
     placeAddress,
   }: IFoodCardProps,
   ref: ForwardedRef<HTMLDivElement>,
@@ -109,7 +114,7 @@ const FoodCard = (
               {placeName}
             </Name>
             <Rating>
-              <img src={IconRating} alt={'별점 아이콘'}/>
+              <img src={IconRatingUrl} alt={'별점 아이콘'}/>
               <Body2 size={'12px'}>
                 {placeRating}
               </Body2>

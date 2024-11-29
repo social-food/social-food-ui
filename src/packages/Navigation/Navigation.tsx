@@ -3,10 +3,8 @@ import React, { ForwardedRef, forwardRef } from 'react';
 import { colors, isAllowedColorType } from '../Palettes/colors.palette';
 import { Typography } from "../index";
 
-import { INavMenus, NavigationPropsType } from './type';
+import { NavigationPropsType } from './type';
 import { Link, LogoComponent, MenusComponent, MyPageComponent, NavigationComponent } from "./useNavigation";
-
-import IconMyPage from '/assets/images/whiteProfile.svg';
 
 const Navigation = (
   {
@@ -15,6 +13,7 @@ const Navigation = (
     menus = [],
     hasMyPage = false,
     myPageLink,
+    myPageIconUrl = '',
     backgroundColor,
     isSticky = true,
     stickyTop,
@@ -64,7 +63,7 @@ const Navigation = (
       {hasMyPage && (
         <MyPageComponent>
           <Link href={myPageLink}>
-            <img src={IconMyPage} alt={'마이페이지 아이콘'}/>
+            <img src={myPageIconUrl} alt={'마이페이지 아이콘'} style={{ display: 'block' }} />
           </Link>
         </MyPageComponent>
       )}
