@@ -34,7 +34,7 @@
     "postcss": "8.4.5"
   },
   "scripts": {
-    "prepare": "rm -rf dist && mkdir dist && tsc &&  rm -rf ./dist/stories && cp -r ./src/assets ./dist",
+    "prepare": "rm -rf dist && mkdir dist && tsc &&  rm -rf ./dist/stories && cp -r ./public/assets ./dist",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "build-storybook": "storybook build"

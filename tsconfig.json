@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@packages/*": ["src/packages/*"],
-      "@assets/*": ["src/assets/*"],
+      "@assets/*": ["public/assets/*"],
     },
     "target": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],

@@ -8,42 +8,42 @@ import { colorsPalette } from '../../Palettes/colors.palette';
 const fontStyle = css`
     @font-face {
         font-family: 'GmarketSans';
-        src: url('../../../assets/fonts/GmarketSansLight.woff') format('woff');
+        src: url('/assets/fonts/GmarketSansLight.woff') format('woff');
         font-weight: 300;
         font-style: normal;
     }
     
     @font-face {
         font-family: 'GmarketSans';
-        src: url('../../../assets/fonts/GmarketSansMedium.woff') format('woff');
+        src: url('/assets/fonts/GmarketSansMedium.woff') format('woff');
         font-weight: 500;
         font-style: normal;
     }
     
     @font-face {
         font-family: 'GmarketSans';
-        src: url('../../../assets/fonts/GmarketSansBold.woff') format('woff');
+        src: url('/assets/fonts/GmarketSansBold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
     }
     
     @font-face {
         font-family: 'Pretendard';
-        src: url('../../../assets/fonts/Pretendard-Light.woff2') format('woff2');
+        src: url('/assets/fonts/Pretendard-Light.woff2') format('woff2');
         font-weight: 300;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Pretendard';
-        src: url('../../../assets/fonts/Pretendard-Regular.woff2') format('woff2');
+        src: url('/assets/fonts/Pretendard-Regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Pretendard';
-        src: url('../../../assets/fonts/Pretendard-Bold.woff2') format('woff2');
+        src: url('/assets/fonts/Pretendard-Bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;
     }
@@ -51,7 +51,7 @@ const fontStyle = css`
 
 const Component = styled.p<ITypographyStyleProps>`
     ${fontStyle};
-    font-family: ${(props) => (props.fontStyle)}, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    font-family: ${(props) => props.fontStyle}, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     
     margin: 0;
     padding: 0;
