@@ -4,6 +4,7 @@ import { colors } from '@packages/Palettes/colors.palette';
 import { Navigation } from '@packages/index';
 
 import IconLogo from '/assets/images/logo.png';
+import IconMyPage from '/assets/images/whiteProfile.svg';
 
 const meta: Meta<typeof Navigation> = {
   title: '내비게이션바/Navigation',
@@ -23,7 +24,7 @@ const meta: Meta<typeof Navigation> = {
       control: {
         type: 'text',
       },
-      description: '마이페이지 이동 url 입력',
+      description: '마이페이지 로고 이미지 url 입력',
     },
     hasMyPage: {
       options: {
@@ -40,6 +41,12 @@ const meta: Meta<typeof Navigation> = {
         type: 'text',
       },
       description: '마이페이지 이동 url 입력',
+    },
+    myPageIconUrl: {
+      control: {
+        type: 'text',
+      },
+      description: '마이페이지 아이콘 url 입력',
     },
     backgroundColor: {
       options: {
@@ -92,6 +99,7 @@ export const Default: Story = {
     ],
     hasMyPage: true,
     myPageLink: '',
+    myPageIconUrl: IconMyPage,
     backgroundColor: colors.coral01,
     isSticky: true,
     stickyTop: '0px',

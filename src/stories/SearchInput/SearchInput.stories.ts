@@ -50,6 +50,6 @@ export const Default: Story = {
     label: 'Label',
     description: 'Description',
     searchIconUrl: IconSearch,
-    searchButtonOnClick: fn(() => window.alert('button click')),
+    searchButtonOnClick: fn(() => {}),
   },
 };

@@ -4,15 +4,13 @@ import { Body2Bold, Title2Description } from "../../index";
 
 import { Button, Input, InputWrapper, ISearchInputProps, TextWrapper, Wrapper } from "./useSearchInput";
 
-import IconSearch from '/assets/images/defaultSearchIcon.svg';
-
 const SearchInput = (
   {
     label,
     description,
     inputWidth = 'auto',
     placeholder = 'Search keyword...',
-    searchIconUrl = IconSearch,
+    searchIconUrl = '',
     searchButtonOnClick,
   }: ISearchInputProps,
   ref: ForwardedRef<HTMLDivElement>) => (
@@ -38,7 +36,7 @@ const SearchInput = (
         placeholder={placeholder}
       />
       <Button onClick={searchButtonOnClick}>
-        <img src={searchIconUrl} alt={'검색 아이콘'}/>
+        <img src={searchIconUrl} alt={'검색 아이콘'} />
       </Button>
     </InputWrapper>
   </Wrapper>

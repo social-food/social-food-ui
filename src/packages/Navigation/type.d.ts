@@ -8,6 +8,7 @@ interface INavMenus {
 interface IDefaultProps {
   hasMyPage: boolean;
   myPageLink?: string;
+  myPageIconUrl?: string;
   hasLogo: boolean;
   logoImageUrl?: string;
   menus: INavMenus[];
@@ -20,6 +21,7 @@ interface IDefaultProps {
 interface IHasMyPageProps extends IDefaultProps {
   hasMyPage: true;
   myPageLink: string;
+  myPageIconUrl: string;
 }
 
 interface IHasLogoProps extends IDefaultProps {
