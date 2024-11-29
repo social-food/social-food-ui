@@ -8,35 +8,35 @@ import { AdminFontWeightsType } from "../../Palettes/weights.palette";
 const fontStyle = css`
   @font-face {
     font-family: 'Pretendard';
-    src: url('../../../assets/fonts/Pretendard-ExtraLight.woff2') format('woff2');
+    src: url('/assets/fonts/Pretendard-ExtraLight.woff2') format('woff2');
     font-weight: 100;
     font-style: normal;
   }
 
   @font-face {
       font-family: 'Pretendard';
-      src: url('../../../assets/fonts/Pretendard-Regular.woff2') format('woff2');
+      src: url('/assets/fonts/Pretendard-Regular.woff2') format('woff2');
       font-weight: 400;
       font-style: normal;
   }
 
   @font-face {
       font-family: 'Pretendard';
-      src: url('../../../assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
+      src: url('/assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
       font-weight: 600;
       font-style: normal;
   }
 
   @font-face {
       font-family: 'Pretendard';
-      src: url('../../../assets/fonts/Pretendard-Bold.woff2') format('woff2');
+      src: url('/assets/fonts/Pretendard-Bold.woff2') format('woff2');
       font-weight: 700;
       font-style: normal;
   }
 
   @font-face {
       font-family: 'Alegreya';
-      src: url('../../../assets/fonts/Alegreya-Bold.woff') format('woff');
+      src: url('/assets/fonts/Alegreya-Bold.woff') format('woff');
       font-weight: 700;
       font-style: normal;
   }
