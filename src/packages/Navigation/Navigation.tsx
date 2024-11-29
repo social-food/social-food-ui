@@ -6,7 +6,7 @@ import { Typography } from "../index";
 import { INavMenus, NavigationPropsType } from './type';
 import { Link, LogoComponent, MenusComponent, MyPageComponent, NavigationComponent } from "./useNavigation";
 
-import IconMyPage from '../../assets/images/whiteProfile.svg';
+import IconMyPage from '/assets/images/whiteProfile.svg';
 
 const Navigation = (
   {
